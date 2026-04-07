@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Dashboard() {
   const [data, setData] = useState(null);
@@ -16,7 +17,40 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <main className="min-h-screen p-6 md:p-10 max-w-5xl mx-auto">
+    <>
+      <Head>
+        <title>Nifty 50 Live Dashboard — Support, Resistance & Pivot Points | CNX Nifty</title>
+        <meta
+          name="description"
+          content="Live Nifty 50 price with today's support, resistance and classic pivot levels (S2, S1, Pivot, R1, R2). Updated every minute from NSE data."
+        />
+        <link rel="canonical" href="https://cnxnifty.in/dashboard" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="CNX Nifty" />
+        <meta
+          property="og:title"
+          content="Nifty 50 Live Dashboard — Support & Resistance | CNX Nifty"
+        />
+        <meta
+          property="og:description"
+          content="Live Nifty 50 price with today's pivot-based support and resistance levels."
+        />
+        <meta property="og:url" content="https://cnxnifty.in/dashboard" />
+        <meta property="og:image" content="https://cnxnifty.in/og-image.png" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nifty 50 Live Dashboard | CNX Nifty" />
+        <meta
+          name="twitter:description"
+          content="Live Nifty 50 with pivot-based support & resistance levels."
+        />
+        <meta name="twitter:image" content="https://cnxnifty.in/og-image.png" />
+      </Head>
+      <main className="min-h-screen p-6 md:p-10 max-w-5xl mx-auto">
       <header className="flex items-center justify-between mb-10">
         <Link href="/" className="text-xl font-bold">
           CNX <span className="text-emerald-400 italic">Nifty</span>
@@ -61,7 +95,8 @@ export default function Dashboard() {
           </p>
         </>
       )}
-    </main>
+      </main>
+    </>
   );
 }
 
