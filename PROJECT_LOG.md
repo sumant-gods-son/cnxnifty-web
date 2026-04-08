@@ -20,30 +20,32 @@ Target: **₹1Cr/year** via AdSense + broker affiliates + premium tier.
 
 ---
 
-## Status as of 2026-04-08
+## Status as of 2026-04-09
 
 ### LIVE & WORKING
 - **Homepage** `/` — Full SEO landing page (16.5 KB, 950+ words)
   - H1, canonical, meta description, OG + Twitter cards
   - 2 JSON-LD blocks (WebSite + FAQPage schemas)
   - Hero, levels preview, 3 benefit cards, how-it-works, blog teaser, email capture form, 5-item FAQ accordion, footer
-  - Audit: title ✅, 1 H1 ✅, canonical ✅, JSON-LD ✅, FAQ details ✅, email form ✅
-- **Dashboard** `/dashboard` — Live Nifty 50 data
-  - Pulls real NSE price (verified: 23123.65 on audit)
-  - Renders S2/S1/Pivot/R1/R2 from classic pivot formula `P=(H+L+C)/3`
-  - Day high/low, last updated timestamp
-- **Blog #1** `/blog/nifty-50-support-and-resistance-today`
-  - 1826 words, 1 H1, canonical, 2 JSON-LD, table, dashboard CTA
-  - Submitted to GSC, indexing requested
-- **sitemap.xml** — 3 URLs (after fix on 2026-04-08), priorities set
+- **Dashboard** `/dashboard` — Live Nifty 50 data with S2/S1/Pivot/R1/R2, day high/low
+- **Blog #1** `/blog/nifty-50-support-and-resistance-today` — 1826 words, FAQPage + Article JSON-LD
+- **Tool #1** `/tools/brokerage-calculator` ⭐ NEW 2026-04-09
+  - 19.7 KB, ~1200 words, 4 brokers (Zerodha, Upstox, Angel One, Groww)
+  - Interactive: segment selector (delivery/intraday/futures/options), buy/sell/qty inputs
+  - Computes brokerage + STT + exch + SEBI + GST 18% + stamp duty → net P&L per broker
+  - 4 affiliate buttons (`rel="noopener noreferrer sponsored"`)
+  - WebApplication + FAQPage JSON-LD, 6-item FAQ accordion
+  - Verified live: title ✅, canonical ✅, JSON-LD ✅ (2 blocks), 4 broker rows ✅, 4 sponsored links ✅, ₹ rendering ✅
+- **sitemap.xml** — 4 URLs (added brokerage-calculator 2026-04-09), all lastmod=2026-04-09
 - **robots.txt** — `Allow: /` + sitemap pointer
 - **og-image.png** — 200 OK, image/png
 
 ### GSC STATUS
 - Domain property `sc-domain:cnxnifty.in` verified
-- Homepage: indexed, re-requested 2026-04-08
+- Homepage: indexed, 93 total clicks on site (Overview as of 2026-04-09)
 - Blog #1: indexing requested
-- Sitemap submitted
+- Brokerage Calculator: indexing requested 2026-04-09 ("URL added to priority crawl queue")
+- Sitemap resubmitted 2026-04-09 (live fetch confirms 4 URLs)
 
 ---
 
@@ -63,7 +65,10 @@ Target: **₹1Cr/year** via AdSense + broker affiliates + premium tier.
 1. Replace Formspree `YOUR_FORM_ID` with a real form ID (5 min, manual signup at formspree.io)
 2. Build `/blog` index page (lists all posts) — currently no listing
 3. Publish Blog #2: "Bank Nifty Option Chain Analysis: PCR, OI & Max Pain Explained"
-4. Add 3 high-traffic calculator tools (see strategy section in chat history)
+4. Build Calculator #2: **Position Size Calculator** (stop-loss based risk sizing) — highest intent
+5. Build Calculator #3: **Pivot Point Calculator** (classic/Fibonacci/Camarilla toggle) — huge search volume
+6. Add header/nav link to Brokerage Calculator from homepage (boost internal linking)
+7. Update real broker affiliate IDs on `/tools/brokerage-calculator` (currently generic links)
 
 ### P1 — Next 2 weeks
 5. Privacy Policy + Terms + About + Contact pages (AdSense requirement)
@@ -116,4 +121,4 @@ Always decode through `TextDecoder('utf-8')` before injecting.
 
 ---
 
-_Last updated: 2026-04-08_
+_Last updated: 2026-04-09 — shipped Brokerage Calculator (calc #1 of 6)._
